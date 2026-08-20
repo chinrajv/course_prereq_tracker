@@ -1,0 +1,160 @@
+.back-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--ink-soft) !important;
+  margin-bottom: 20px;
+}
+
+.course-header {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.course-header__code {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.course-header h1 { font-size: 24px; }
+
+.course-header__meta {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin: 4px 0 12px;
+}
+
+.course-header__desc {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ladder-section, .unlocks-section {
+  margin-bottom: 40px;
+}
+
+.ladder-section h2, .unlocks-section h2 {
+  font-size: 18px;
+}
+
+.section-hint {
+  color: var(--ink-faint);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+/* --- Ladder / spine visualization ---------------------------------------
+   The target course sits at the top; each rung below it is one hop further
+   back in the prerequisite chain, connected by a vertical spine - a
+   subway-line reading of "what leads to what". */
+.ladder {
+  position: relative;
+  padding-left: 28px;
+}
+
+.ladder::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--line);
+}
+
+.ladder__rung {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.ladder__rung:last-child { margin-bottom: 0; }
+
+.ladder__spine-dot {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--gold);
+}
+
+.ladder__spine-dot--target {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.ladder__rung-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.ladder__nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ladder__node {
+  display: block;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 13.5px;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.ladder__node:hover {
+  border-color: var(--gold);
+}
+
+.ladder__node--target {
+  background: var(--ink);
+  color: var(--paper) !important;
+  border-color: var(--ink);
+  font-weight: 600;
+}
+
+.ladder__node .mono, .ladder__node--target .mono {
+  color: var(--gold);
+  margin-right: 6px;
+}
+
+.ladder__node--target .mono { color: var(--gold-soft); }
+
+.unlock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.unlock-pill {
+  display: inline-block;
+  background: var(--green-soft);
+  color: var(--green) !important;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  text-decoration: none !important;
+}
+
+.unlock-pill:hover { border-color: var(--green); }
+
+.unlock-pill .mono { font-weight: 700; margin-right: 6px; }

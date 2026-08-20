@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Design tokens — "Academic Ledger"
+   A course catalog should feel like a well-kept university register:
+   ink on paper, a single seal-gold accent for what's "unlocked" or "earned",
+   serif for headings (catalog copy), humanist sans for UI/body text.
+   ========================================================================== */
+:root {
+  --paper: #F5F3EE;
+  --paper-raised: #FFFFFF;
+  --ink: #1E2A38;
+  --ink-soft: #4A5568;
+  --ink-faint: #8A93A3;
+  --line: #DEDACD;
+  --gold: #A8791A;
+  --gold-soft: #F3E6C8;
+  --green: #2F6B4F;
+  --green-soft: #E4EFE8;
+  --red: #A3402E;
+  --red-soft: #F5E4DF;
+
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --radius: 3px;
+  --shadow-card: 0 1px 2px rgba(30, 42, 56, 0.06), 0 1px 0 rgba(30, 42, 56, 0.04);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4em 0;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+code, .mono { font-family: var(--font-mono); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
