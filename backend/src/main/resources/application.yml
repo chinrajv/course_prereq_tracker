@@ -15,4 +15,4 @@ cognodb:
 # CORS - allow the React dev server to call this API locally
 app:
   cors:
-    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3000}
+    allowed-origins: ${ALLOWED_ORIGINS:https://course-prereq-tracker.onrender.com}
