@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: course-prereq-tracker
+
+# CognoDB / Neo4j connection - ALWAYS read from environment variables.
+# Never hardcode the URI or password here, and never commit real values.
+cognodb:
+  uri: ${COGNODB_URI:bolt+s://your-instance-id.databases.cognodb.cloud}
+  username: ${COGNODB_USERNAME:cognodb}
+  password: ${COGNODB_PASSWORD:}
+
+# CORS - allow the React dev server to call this API locally
+app:
+  cors:
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3000}
